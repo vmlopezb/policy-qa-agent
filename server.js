@@ -130,7 +130,7 @@ ${chunksText}
 Provide a clear, concise answer citing the document sources.`;
 
   const response = await client.messages.create({
-    model: 'claude-3-5-sonnet-20241022',
+    model: 'claude-3-sonnet-20240229',
     max_tokens: 500,
     system: systemPrompt,
     messages: [{ role: 'user', content: userPrompt }]
