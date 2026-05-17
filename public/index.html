@@ -178,4 +178,566 @@
     .logout-btn {
       padding: 8px 16px;
       background: #d32f2f;
-      col
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .logout-btn:hover {
+      background: #b71c1c;
+    }
+
+    /* TAB NAVIGATION */
+    .tabs {
+      display: flex;
+      gap: 0;
+      margin-bottom: 20px;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 15px;
+      border: none;
+      background: white;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      color: #666;
+      border-bottom: 3px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .tab-btn.active {
+      color: #667eea;
+      border-bottom-color: #667eea;
+    }
+
+    .tab-btn:hover {
+      background: #f9f9f9;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* Q&A SECTION */
+    .qa-section {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .qa-section h2 {
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+
+    .qa-input-area {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    .qa-input-area textarea {
+      flex: 1;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 14px;
+      resize: vertical;
+      min-height: 60px;
+    }
+
+    .qa-input-area textarea:focus {
+      outline: none;
+      border-color: #667eea;
+    }
+
+    .qa-input-area button {
+      padding: 12px 24px;
+      align-self: flex-end;
+    }
+
+    .answer-box {
+      background: #f9f9f9;
+      border-left: 4px solid #667eea;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+
+    .answer-box.thinking {
+      border-left-color: #ffa500;
+    }
+
+    .answer-box.error {
+      border-left-color: #d32f2f;
+      background: #ffebee;
+    }
+
+    .answer-box h3 {
+      margin-bottom: 10px;
+      color: #333;
+      font-size: 16px;
+    }
+
+    .answer-box p {
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .sources {
+      padding-top: 15px;
+      border-top: 1px solid #ddd;
+    }
+
+    .sources h4 {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .source-list {
+      list-style: none;
+    }
+
+    .source-list li {
+      font-size: 13px;
+      color: #667eea;
+      margin-bottom: 5px;
+      padding-left: 15px;
+      position: relative;
+    }
+
+    .source-list li:before {
+      content: "📄";
+      position: absolute;
+      left: 0;
+    }
+
+    /* ADMIN SECTION */
+    .admin-section {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .upload-area {
+      border: 2px dashed #ddd;
+      padding: 30px;
+      border-radius: 8px;
+      text-align: center;
+      margin-bottom: 30px;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+
+    .upload-area:hover {
+      border-color: #667eea;
+      background: #f9f9f9;
+    }
+
+    .upload-area.dragover {
+      border-color: #667eea;
+      background: #f0f4ff;
+    }
+
+    .upload-area input[type="file"] {
+      display: none;
+    }
+
+    .upload-area p {
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .doc-list {
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    .doc-item {
+      background: #f9f9f9;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .doc-item strong {
+      color: #333;
+    }
+
+    .doc-item small {
+      color: #999;
+      display: block;
+      margin-top: 5px;
+    }
+
+    .doc-item button {
+      padding: 6px 12px;
+      font-size: 12px;
+      background: #d32f2f;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .doc-item button:hover {
+      background: #b71c1c;
+    }
+
+    .loading {
+      text-align: center;
+      color: #999;
+      padding: 20px;
+      font-style: italic;
+    }
+
+    .success-msg {
+      background: #e8f5e9;
+      color: #2e7d32;
+      padding: 15px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      display: none;
+    }
+
+    .success-msg.show {
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      .login-box {
+        padding: 30px 20px;
+      }
+
+      .header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+
+      .tabs {
+        flex-direction: column;
+      }
+
+      .qa-input-area {
+        flex-direction: column;
+      }
+
+      .qa-input-area button {
+        align-self: stretch;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- LOGIN PAGE -->
+<div class="login-page" id="loginPage">
+  <div class="login-box">
+    <h1>Policy Q&A</h1>
+    <p>Sinai IM Residency Program</p>
+
+    <div class="role-selector">
+      <button class="role-btn active" data-role="resident">Resident</button>
+      <button class="role-btn" data-role="admin">Admin</button>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter password">
+    </div>
+
+    <button class="btn" id="loginBtn">Login</button>
+
+    <div class="error-msg" id="errorMsg"></div>
+  </div>
+</div>
+
+<!-- APP PAGE -->
+<div class="app-page" id="appPage">
+  <div class="container">
+    <div class="header">
+      <h1>📋 Policy Q&A Agent</h1>
+      <div class="header-right">
+        <span class="user-badge"><span id="userRole">resident</span> mode</span>
+        <button class="logout-btn" id="logoutBtn">Logout</button>
+      </div>
+    </div>
+
+    <!-- RESIDENT TAB -->
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="qa">Ask a Question</button>
+      <button class="tab-btn" id="adminTabBtn" style="display: none;" data-tab="admin">Manage Documents</button>
+    </div>
+
+    <!-- Q&A TAB -->
+    <div class="tab-content active" id="qaTab">
+      <div class="qa-section">
+        <h2>Ask About Policies</h2>
+        <p style="color: #666; margin-bottom: 20px;">Type any question about residency policies. The AI will search the documents and answer based only on official policy.</p>
+
+        <div class="qa-input-area">
+          <textarea id="questionInput" placeholder="e.g., What is the policy on vacation days? How do I request time off?"></textarea>
+          <button class="btn" id="askBtn">Ask</button>
+        </div>
+
+        <div id="answersContainer"></div>
+      </div>
+    </div>
+
+    <!-- ADMIN TAB -->
+    <div class="tab-content" id="adminTab">
+      <div class="admin-section">
+        <h2>Manage Policy Documents</h2>
+
+        <div class="success-msg" id="successMsg"></div>
+
+        <div class="upload-area" id="uploadArea">
+          <p><strong>📤 Upload Policy Documents</strong></p>
+          <p style="font-size: 13px; color: #999;">Click or drag PDF files here</p>
+          <input type="file" id="fileInput" accept=".pdf" multiple>
+        </div>
+
+        <h3 style="margin-top: 30px; margin-bottom: 15px;">Documents in System</h3>
+        <div id="documentList" class="loading">Loading documents...</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ========== STATE ==========
+  let currentToken = null;
+  let currentRole = 'resident';
+
+  // ========== LOGIN LOGIC ==========
+  document.querySelectorAll('.role-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.role-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentRole = btn.dataset.role;
+    });
+  });
+
+  document.getElementById('loginBtn').addEventListener('click', async () => {
+    const password = document.getElementById('password').value;
+    if (!password) {
+      showError('Please enter a password');
+      return;
+    }
+
+    const response = await fetch('/api/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password, isAdmin: currentRole === 'admin' })
+    });
+
+    if (response.ok) {
+      const data = await response.json();
+      currentToken = data.token;
+      document.getElementById('userRole').textContent = data.role;
+
+      // Show admin tab if admin
+      if (data.role === 'admin') {
+        document.getElementById('adminTabBtn').style.display = 'block';
+        loadDocuments();
+      }
+
+      document.getElementById('loginPage').style.display = 'none';
+      document.getElementById('appPage').style.display = 'block';
+    } else {
+      showError('Invalid password');
+    }
+  });
+
+  document.getElementById('logoutBtn').addEventListener('click', () => {
+    currentToken = null;
+    document.getElementById('password').value = '';
+    document.getElementById('loginPage').style.display = 'flex';
+    document.getElementById('appPage').style.display = 'none';
+    document.getElementById('answersContainer').innerHTML = '';
+  });
+
+  function showError(msg) {
+    const el = document.getElementById('errorMsg');
+    el.textContent = msg;
+    el.classList.add('show');
+    setTimeout(() => el.classList.remove('show'), 5000);
+  }
+
+  // ========== Q&A LOGIC ==========
+  document.getElementById('askBtn').addEventListener('click', askQuestion);
+  document.getElementById('questionInput').addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.key === 'Enter') askQuestion();
+  });
+
+  async function askQuestion() {
+    const question = document.getElementById('questionInput').value.trim();
+    if (!question) return;
+
+    const container = document.getElementById('answersContainer');
+    const answerId = 'answer-' + Date.now();
+    
+    const answerEl = document.createElement('div');
+    answerEl.id = answerId;
+    answerEl.className = 'answer-box thinking';
+    answerEl.innerHTML = '<p style="color: #999;">Searching policy documents...</p>';
+    container.insertBefore(answerEl, container.firstChild);
+
+    try {
+      const response = await fetch('/api/ask', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question, token: currentToken })
+      });
+
+      if (!response.ok) throw new Error('Request failed');
+
+      const data = await response.json();
+
+      let html = `<h3>Answer</h3><p>${escapeHtml(data.answer)}</p>`;
+      if (data.sources && data.sources.length > 0) {
+        html += '<div class="sources"><h4>Sources</h4><ul class="source-list">';
+        data.sources.forEach(source => {
+          html += `<li>${escapeHtml(source)}</li>`;
+        });
+        html += '</ul></div>';
+      }
+
+      answerEl.className = 'answer-box';
+      answerEl.innerHTML = html;
+    } catch (err) {
+      answerEl.className = 'answer-box error';
+      answerEl.innerHTML = `<h3>Error</h3><p>${escapeHtml(err.message)}</p>`;
+    }
+  }
+
+  // ========== ADMIN LOGIC ==========
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab + 'Tab').classList.add('active');
+    });
+  });
+
+  const uploadArea = document.getElementById('uploadArea');
+  const fileInput = document.getElementById('fileInput');
+
+  uploadArea.addEventListener('click', () => fileInput.click());
+  uploadArea.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    uploadArea.classList.add('dragover');
+  });
+  uploadArea.addEventListener('dragleave', () => uploadArea.classList.remove('dragover'));
+  uploadArea.addEventListener('drop', (e) => {
+    e.preventDefault();
+    uploadArea.classList.remove('dragover');
+    handleFiles(e.dataTransfer.files);
+  });
+
+  fileInput.addEventListener('change', (e) => handleFiles(e.target.files));
+
+  async function handleFiles(files) {
+    for (const file of files) {
+      if (!file.name.endsWith('.pdf')) {
+        alert('Only PDF files are allowed');
+        continue;
+      }
+
+      const formData = new FormData();
+      formData.append('file', file);
+      formData.append('token', currentToken);
+
+      const response = await fetch('/api/upload', {
+        method: 'POST',
+        body: formData
+      });
+
+      if (response.ok) {
+        showSuccess(`Document "${file.name}" uploaded successfully`);
+        loadDocuments();
+      } else {
+        alert(`Failed to upload ${file.name}`);
+      }
+    }
+    fileInput.value = '';
+  }
+
+  async function loadDocuments() {
+    const container = document.getElementById('documentList');
+    const response = await fetch(`/api/documents?token=${currentToken}`);
+    const docs = await response.json();
+
+    if (docs.length === 0) {
+      container.innerHTML = '<p style="color: #999;">No documents uploaded yet.</p>';
+      return;
+    }
+
+    let html = '<ul class="doc-list">';
+    docs.forEach(doc => {
+      html += `
+        <li class="doc-item">
+          <div>
+            <strong>${escapeHtml(doc.filename)}</strong>
+            <small>Uploaded: ${new Date(doc.upload_date).toLocaleDateString()}</small>
+          </div>
+          <button onclick="deleteDocument(${doc.id})">Delete</button>
+        </li>
+      `;
+    });
+    html += '</ul>';
+    container.innerHTML = html;
+  }
+
+  async function deleteDocument(id) {
+    if (!confirm('Delete this document?')) return;
+    await fetch(`/api/documents/${id}?token=${currentToken}`, { method: 'DELETE' });
+    loadDocuments();
+  }
+
+  function showSuccess(msg) {
+    const el = document.getElementById('successMsg');
+    el.textContent = msg;
+    el.classList.add('show');
+    setTimeout(() => el.classList.remove('show'), 4000);
+  }
+
+  function escapeHtml(text) {
+    const map = {
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#039;'
+    };
+    return text.replace(/[&<>"']/g, m => map[m]);
+  }
+</script>
+
+</body>
+</html>
