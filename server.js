@@ -96,7 +96,9 @@ function findRelevantChunks(question, maxChunks = 5) {
 }
 
 // ============ CLAUDE API ============
-const client = new Anthropic();
+const client = new Anthropic({
+  apiKey: process.env.CLAUDE_API_KEY
+});
 
 async function answerQuestion(question) {
   const relevantChunks = findRelevantChunks(question, 5);
