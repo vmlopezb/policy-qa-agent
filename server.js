@@ -130,7 +130,7 @@ ${chunksText}
 Provide a clear, concise answer citing the document sources.`;
 
   const response = await client.messages.create({
-    model: 'claude-3-sonnet-20240229',
+    model: 'claude-opus-4-6',
     max_tokens: 500,
     system: systemPrompt,
     messages: [{ role: 'user', content: userPrompt }]
@@ -223,5 +223,5 @@ app.listen(PORT, () => {
   console.log(`🚀 Policy Q&A Agent running on port ${PORT}`);
   console.log(`Resident Password: ${RESIDENT_PASSWORD}`);
   console.log(`Admin Password: ${ADMIN_PASSWORD}`);
-  console.log(`Make sure CLAUDE_API_KEY is set!`);
+  console.log(`API Key: ${CLAUDE_API_KEY ? 'SET' : 'NOT SET'}`);
 });
